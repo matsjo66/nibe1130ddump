@@ -1,4 +1,4 @@
-# nibefighter
+# nibeanalytics
 
 Project for data collection, analytics and optimization for Nibe Fighter heat pumps. 
 
