@@ -9,17 +9,17 @@ Initial ideas with the project are:
   
 Can be used as a replacement for the Nibe RCU-10 or RCU-11 commercial modules.  
 
-The project should work with the listed pumps below (list is based on pumps compatible with RCU-11/10):
+The project should fairly work with the listed pumps below (list is based on pumps compatible with RCU-11/10):
 
-  - Nibe Fighter 360p *
-  - Nibe Fighter 113x *
-  - Nibe Fighter 1150 *
-  - Nibe Fighter 123x
-  - Nibe Fighter 1250
-  - Nibe Fighter 1320
-  - Nibe Fighter 1330
+- Nibe Fighter 360p (v) 
+- Nibe Fighter 113x (v)
+- Nibe Fighter 1150 (v)
+- Nibe Fighter 123x
+- Nibe Fighter 1250
+- Nibe Fighter 1320
+- Nibe Fighter 1330
 
-(* = verified - Please add your model to the list of verified heat pumps)
+(v = verified - Please add your model to the list of verified heat pumps)
 
 Current functionality: 
 
