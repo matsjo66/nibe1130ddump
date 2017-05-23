@@ -45,4 +45,15 @@ Requirements:
  - A webservice collecting the Nibe data messages (logstash, hadoop, nodejs etc, etc)
  
  
-  
+Arduino Nibe Logger
+
+ < Placeholder for Arduino logger schematics >
+
+ !!! WARNING !! Before connecting the logger, the Nibe heat pump and the Arduino logger MUST have a common ground connected. Otherwise the Nibe Main CPU PCB is in danger (expensive).  
+
+ < Photo of RS485 bus connector on Nibe 1130. >
+
+
+
+
+ 
