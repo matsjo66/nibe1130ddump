@@ -21,20 +21,22 @@ The project should fairly work with the listed pumps below (list is based on pum
 
 (v = verified - Please add your model to the list of verified heat pumps)
 
-Current functionality: 
+
+## Current functionality: 
 
   - Data collection over RS485 serial bus
   - Posting of data to HTTP REST service over Wifi using ESPN8266
   - Currently configured for logstash HTTP Input module (https://www.elastic.co/guide/en/logstash/current/plugins-inputs-http.html)
-  
-In the Roadmap:
+
+
+## Roadmap:
 
   - Elasticsearch Dashboard for visualization (in progress).
   - Usage of AI / Machine learning for heat pump optimization and  management.
-  - Figure out and implement the Nibe Command structure so pump can be managed prgrammatically.
+  - Figure out and implement the Nibe Command structure so heat pump can be managed prgrammatically.
    
 
-Requirements:
+## Requirements:
 
  - Arduino ATmega2560 (or any Arduino compatible board with support for two or more programmable serial ports).
  - ESP2866 Wifi shield for Arduino
@@ -44,14 +46,36 @@ Requirements:
  - A compatibel Nibe Fighter heat pump running Nibe Software version 2.0 or above (required for RCU-10/11 functionality)
  - A webservice collecting the Nibe data messages (logstash, hadoop, nodejs etc, etc)
  
+## Arduino Nibe Logger
+
+ ** WARNING ! Before connecting the logger, the Nibe heat pump and the Arduino logger MUST have a common ground connected. Otherwise the Nibe CPU PCB is in danger (expensive).  
+
+ ![Arduino Nibe Logger](images/00000-arduinoNibeLogger.jpg)
+
+#### Connection scheme Nibe RJ45 -> TP Cable -> RS485 -> Arduino 
+
+ The connection to the heat pump is done using a standard RJ-45 TP Ethernet cable (for pinning se table below). Connect the cable to any of the Nibe Serial Bus end-points. For Nibe 1130 thee are two serial bus end-points at the Display Unit (DPU) and at the main PCB (pictures below).  
  
-Arduino Nibe Logger
+| Nibe RJ45 | RS485 | Arduino |
+|-----------|-------|---------|
+|   1  |   A   |         |
+|   2  |   B   |         |
+|  7,8 |       |   GND   |
+|      |   DI  |   18    |
+|      |   DE  |    9    |
+|      |   RE  |    8    |
+|      |   RO  |   19    |
+|      |   GND |   GND   |
+|      |   VCC |   5V    |
 
- < Placeholder for Arduino logger schematics >
 
- !!! WARNING !! Before connecting the logger, the Nibe heat pump and the Arduino logger MUST have a common ground connected. Otherwise the Nibe Main CPU PCB is in danger (expensive).  
+ 
+ ![Arduino RS485](images/00000-RS485.jpg)
 
- < Photo of RS485 bus connector on Nibe 1130. >
+ ![Nibe DPU RJ-45 connector](images/00000-NibeDPU.jpg)
+ 
+ ![Nibe PCB RJ-45 connector](images/00000-NibePCB.jpg)
+ 
 
 
 
